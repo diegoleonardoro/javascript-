@@ -1,0 +1,56 @@
+
+/*   Foobar applied to one single number: */
+
+function foobar(num) {
+  // array starting from 1 and not 0
+ 	 if (num % 15 === 0) {
+   	 return 'foobar';
+ 	 } else if (num % 3 === 0) {
+   	 return 'foo';
+ 	 } else if (num % 5 === 0) {
+   	 return 'bar';
+ 	 } else {
+   	 return num;
+ 	 };
+}
+console.log(foobar(15));
+
+
+/*   Foobar applied to one single number: */
+function foobar(num) {
+  const numArray = [...Array(num)].map((_,index)=> index+1);
+    return numArray.map(num => {
+    if (num % 15 === 0) {
+      return 'foobar';
+    } else if (num % 3===0) {
+      return 'foo';
+    } else if (num % 5===0) {
+      return 'bar';
+    } else {
+      return num;
+    }
+  });
+}
+ 
+console.log(foobar(15));
+
+
+/*  Fibonacci: */
+
+function fibonacci(num) {
+  switch (num) {
+	case 0:
+	case 1:
+		return num;
+	default:
+		return fibonacci(num - 1) + fibonacci(num - 2);
+	}
+}
+
+
+const range8 = [...new Array(9)].map((_, index) => index);
+
+const first7Fibonacci = range8.map(fibonacci); 
+console.log(first7Fibonacci);
+
+
